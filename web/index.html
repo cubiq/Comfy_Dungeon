@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Comfy Dungeon</title>
+
+		<link rel="stylesheet" type="text/css" href="/dungeon/css/uikit.min.css">
+		<link rel="stylesheet" type="text/css" href="/dungeon/css/dungeon.css?v=0.1.0">
+	</head>
+	<body>
+    <!-- LEFT BAR -->
+    <aside id="left-col" class="uk-light uk-visible@m">
+      <h4 class="uk-text-center uk-margin-remove-vertical text-light">Comfy Dungeon<small><sup> v0.1.0</sup></small></h4>
+
+      <div class="left-content-box left-nav-wrap">
+        <form class="uk-grid-small">
+          <div uk-accordion="collapsible: false">
+            <div>
+              <a class="uk-accordion-title" href>Generation parms</a>
+
+              <div class="uk-accordion-content uk-grid-small" uk-grid>
+                <div class="uk-width-1-2@s">
+                  <label class="uk-form-label" for="quality-input">Quality</label>
+                  <input class="uk-range" id="quality-input" type="range" value="1" min="0.0" max="1.0" step="0.25" aria-label="Range">
+                  <div class="uk-form-label uk-text-muted" uk-grid><div class="uk-width-1-2@s"><span uk-icon="icon: arrow-left"></span>Speed</div><div class="uk-width-1-2@s" style="text-align:right;">Accuracy<span uk-icon="icon: arrow-right"></span></div></div>
+                </div>
+
+                <div class="uk-width-1-2@s">
+                  <label class="uk-form-label" for="batch-size-input">Results per generation</label>
+                  <input class="uk-range" id="batch-size-input" type="range" value="1" min="1" max="4" step="1" aria-label="Range" list="batch-size-values">
+                  <datalist id="batch-size-values" class="uk-form-label uk-text-muted">
+                    <option value="0" label="1"></option>
+                    <option value="33" label="2"></option>
+                    <option value="66" label="3"></option>
+                    <option value="100" label="4"></option>
+                  </datalist>
+                </div>
+
+                <div class="uk-width-1-1@s">
+                  <label class="uk-form-label" for="style-input">Style &amp; Model</label>
+                  <div class="uk-form-controls">
+                    <select class="uk-select" id="style-input" aria-label="Select">
+                      <option value="ProteusV0.3-LCM">Illustration - Fast</option>
+                      <option value="ProteusV0.3" selected>Illustration - Accurate</option>
+                      <option value="ProteusV0.3-LCM-Anime">Anime - Fast</option>
+                      <option value="ProteusV0.3-Anime">Anime - Accurate</option>
+                      <option value="DreamShaperXLTurboV2-Cinematic">Cinematic</option>
+                    </select>
+                  </div>
+                </div>  
+              </div>
+            </div>
+
+            <div>
+              <a class="uk-accordion-title" href>Setting</a>
+
+              <div class="uk-accordion-content uk-grid-small" uk-grid>
+                <div class="uk-width-1-2@s">
+                  <label class="uk-form-label" for="setting-select">Setting</label>
+                  <div class="uk-form-controls">
+                    <select class="uk-select" id="setting-input" aria-label="Select">
+                      <option value="fantasy">Fantasy</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-2@s">
+                  <label class="uk-form-label" for="background-input">Background</label>
+                  <div class="uk-form-controls">
+                    <select class="uk-select" id="background-input" aria-label="Select">
+                      <option value="" selected>-- undefined --</option>
+                      <option value="inside a cave">Cave</option>
+                      <option value="in the desert">Desert</option>
+                      <option value="inside a dungeon">Dungeon</option>
+                      <option value="flames in background">Flames</option>
+                      <option value="forest in background">Forest</option>
+                      <option value="on a glacier">Glacier</option>
+                      <option value="magical aura in background">Magical aura</option>
+                      <option value="mountains in background">Mountains</option>
+                      <option value="flat plain background">Plain background</option>
+                      <option value="in the study, scrolls and potions">Study</option>
+                      <option value="inside a temple">Temple</option>
+                      <option value="on the streets of an old town">Town</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-2@s">
+                  <label class="uk-form-label" for="mood-input">Mood</label>
+                  <div class="uk-form-controls">
+                    <select class="uk-select" id="mood-input" aria-label="Select">
+                      <option value="angry evil">Angry</option>
+                      <option value="wise thoughtful serious mood">Somber</option>
+                      <option value="" selected>Neutral</option>
+                      <option value="cunning smirk mood">Cunning</option>
+                      <option value="serene joyful dreamy">Serene</option>
+                      <option value="happy jovial (smiling:0.85)">Happy</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-2@s">
+                  <label class="uk-form-label" for="atmosphere-input">Color hint</label>
+                  <button uk-icon="icon: question" type="button"></button>
+                  <div class="uk-card uk-card-small uk-card-body uk-card-default" uk-drop="pos: right-top; mode: click;">The picture will have a predominat color.</div>
+                  <div class="uk-form-controls">
+                    <select class="uk-select" id="atmosphere-input" aria-label="Select">
+                      <option value="">-- undefined --</option>
+                      <option value="burgundy">Burgundy</option>
+                      <option value="scarlet red">Scarlet</option>
+                      <option value="pink">Pink</option>
+                      <option value="beige">Beige</option>
+                      <option value="brown">Brown</option>
+                      <option value="orange">Orange</option>
+                      <option value="yellow">Yellow</option>
+                      <option value="green">Green</option>
+                      <option value="emerald">Emerald</option>
+                      <option value="aquamarine">Aquamarine</option>
+                      <option value="cerulean">Cerulean</option>
+                      <option value="blue">Blue</option>
+                      <option value="purple">Purple</option>
+                      <option value="magenta">Magenta</option>
+                      <option value="white">White</option>
+                      <option value="gray">Gray</option>
+                      <option value="black">Black</option>
+                      <option value="bronze">Bronze</option>
+                      <option value="copper">Copper</option>
+                      <option value="silver">Silver</option>
+                      <option value="gold">Gold</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <a class="uk-accordion-title" href>Character</a>
+
+              <div class="uk-accordion-content uk-grid-small" uk-grid>
+                <div class="uk-width-1-2@s">
+                  <label class="uk-form-label" for="gender-input">Gender</label>
+                  <button uk-icon="icon: question" type="button"></button>
+                  <div class="uk-card uk-card-small uk-card-body uk-card-default" uk-drop="pos: right-top; mode: click;">Femininity/Masculinity slider trait is temptative, the result may not be what you expect.</div>
+                  <input class="uk-range" id="gender-input" type="range" value="0" min="0" max="3" step="1" aria-label="Range">
+                  <div class="uk-form-label uk-grid-small uk-text-muted" uk-grid><div class="uk-width-1-2@s"><span uk-icon="icon: arrow-left"></span>Femininity</div><div class="uk-width-1-2@s" style="text-align:right;">Masculinity<span uk-icon="icon: arrow-right"></span></div></div>
+                </div>
+                <div class="uk-width-1-2@s">
+                  <label class="uk-form-label" for="age-input">Age</label>
+                  <input class="uk-range" id="age-input" type="range" value="1" min="0" max="3" step="1" aria-label="Range">
+                  <div class="uk-form-label uk-grid-small uk-text-muted" uk-grid><div class="uk-width-1-2@s"><span uk-icon="icon: arrow-left"></span>Young</div><div class="uk-width-1-2@s" style="text-align:right;">Old<span uk-icon="icon: arrow-right"></span></div></div>
+                </div>
+
+                <div class="uk-width-1-2@s">
+                  <label class="uk-form-label" for="body-structure-input">Body structure</label>
+                  <input class="uk-range" id="body-structure-input" type="range" value="1" min="0" max="3" step="1" aria-label="Range">
+                  <div class="uk-form-label uk-grid-small uk-text-muted" uk-grid><div class="uk-width-1-2@s"><span uk-icon="icon: arrow-left"></span>Slender</div><div class="uk-width-1-2@s" style="text-align:right;">Chubby<span uk-icon="icon: arrow-right"></span></div></div>
+                </div>
+                <div class="uk-width-1-2@s"></div>
+
+                <div class="uk-width-1-2@s">
+                  <label class="uk-form-label" for="race-input">Race</label>
+                  <div class="uk-form-controls">
+                    <select class="uk-select" id="race-input" aria-label="Select">
+                      <option value="dwarf">Dwarf</option>
+                      <option value="elven">Elf</option>
+                      <option value="gnome">Gnome</option>
+                      <option value="half-elf">Half-Elf</option>
+                      <option value="halfling">Halfling</option>
+                      <option value="human" selected>Human</option>
+                      <option value="tiefling">Tiefling</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="uk-width-1-2@s">
+                  <label class="uk-form-label" for="ethnicity-input">Ethnic bias</label>
+                  <button uk-icon="icon: question" type="button"></button>
+                  <div class="uk-card uk-card-small uk-card-body uk-card-default" uk-drop="pos: right-top; mode: click;">Adds a random ethnicity to the character based on the area selected. It's a light conditioning that helps making the generations more interesting; it doesn't guarantee an exact nationality.</div>
+                  <div class="uk-form-controls">
+                    <select class="uk-select" id="ethnicity-input" aria-label="Select">
+                      <option value="">-- undefined --</option>
+                      <option value="0">Completely Random</option>
+      
+                      <option value="1">Africa: Eastern</option>
+                      <option value="2">Africa: Middle</option>
+                      <option value="3">Africa: Northen</option>
+                      <option value="4">Africa: Southern</option>
+                      <option value="5">Africa: Western</option>
+      
+                      <option value="6">America: Central</option>
+                      <option value="7">America: Northern</option>
+                      <option value="8">America: Sourthern</option>
+      
+                      <option value="9">Asia: Central</option>
+                      <option value="10">Asia: Eastern</option>
+                      <option value="11">Asia: South-Eastern</option>
+                      <option value="12">Asia: Southern</option>
+                      <option value="13">Asia: Western</option>
+      
+                      <option value="14">Australia &amp; New Zealand</option>
+      
+                      <option value="15">European: Eastern</option>
+                      <option value="16">European: Northern</option>
+                      <option value="17">European: Southern</option>
+                      <option value="18">European: Western</option>
+                      <option value="19">European: Islandic</option>
+      
+                      <!--option value="20">Carribean</option-->
+                      <option value="21">Mela/Micro/Poly-nesia</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-2@s">
+                  <label class="uk-form-label" for="class-input">Class</label>
+                  <div class="uk-form-controls">
+                    <select class="uk-select" id="class-input" aria-label="Select">
+                      <option value="cleric">Cleric</option>
+                      <option value="fighter" selected>Fighter</option>
+                      <option value="mage">Mage</option>
+                      <option value="noble person">Noble person</option>
+                      <option value="Paladin">Paladin</option>
+                      <option value="peasant">Peasant</option>
+                      <option value="ranger">Ranger</option>
+                      <option value="shaman">Shaman</option>
+                      <option vlaue="thief">Thief</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div class="uk-width-1-2@s">
+                  <label class="uk-form-label" for="gear-input">Clothing/Armor</label>
+                  <div class="uk-form-controls">
+                    <select class="uk-select" id="gear-input" aria-label="Select">
+                      <option value="">-- undefined --</option>
+                      <option value="casual clothing">Casual clothing</option>
+                      <option value="elegant garments">Elegant clothing</option>
+                      <option value="furs clothing">Furs</option>
+                      <option value="a leather armor">Light armor</option>
+                      <option value="minimal simple clothing">Minimal</option>
+                      <option value="an heavy armor">Heavy armor</option>
+                      <option value="noble clothing">Noble clothing</option>
+                      <option value="rags">Rags</option>
+                      <option value="a robe">Robe</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-2@s">
+                  <label class="uk-form-label" for="hairstyle-input">Hairstyle</label>
+                  <button uk-icon="icon: question" type="button"></button>
+                  <div class="uk-card uk-card-small uk-card-body uk-card-default" uk-drop="pos: right-top; mode: click;">Please note that some hairstyles work better (or at all) with a specific gender and/or ethnicity.</div>
+                  <div class="uk-form-controls">
+                    <select class="uk-select" id="hairstyle-input" aria-label="Select">
+                      <option value="" selected>-- undefined --</option>
+                      <option value="bald">Bald</option>
+                      <option value="simple braid hairstyle">Braids</option>
+                      <option value="buzz haircut">Buzz cut</option>
+                      <option value="cornrows hairstyle">Cornrows</option>
+                      <option value="long {{COLOR}}curly hair">Curly Long</option>
+                      <option value="short {{COLOR}}curly hair">Curly Short</option>
+                      <option value="dreadlocks hairstyle">Dreadlocks</option>
+                      <option value="long {{COLOR}}hair">Long hair</option>
+                      <option value="long {{COLOR}}disheveled hair">Long disheveled</option>
+                      <option value="long {{COLOR}}straight hair">Long straight</option>
+                      <option value="short mohawk hairstyle">Mohawk</option>
+                      <option value="pixie haircut">Pixie cut</option>
+                      <option value="ponytail hairstyle">Ponytail</option>
+                      <option value="short {{COLOR}}hair">Short hair</option>
+                      <option value="short {{COLOR}}disheveled hair">Short disheveled</option>
+                      <option value="short {{COLOR}}straight hair">Short straight</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-2@s">
+                  <label class="uk-form-label" for="haircolor-input">Hair color</label>
+                  <div class="uk-form-controls">
+                    <select class="uk-select" id="haircolor-input" aria-label="Select">
+                      <option value="">-- undefined --</option>
+                      <option value="blond">Blond</option>
+                      <option value="dark blond">Dark Blond</option>
+                      <option value="medium brown">Medium Brown</option>
+                      <option value="dark brown">Dark Brown</option>
+                      <option value="reddish brown">Reddish Brown</option>
+                      <option value="red">Red</option>
+                      <option value="black">Black</option>
+                      <option value="canescent">Graying</option>
+                      <option value="gray">Gray</option>
+                      <option value="white">White</option>
+                    </select>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div>
+              <a class="uk-accordion-title" href>Custom</a>
+
+              <div class="uk-accordion-content uk-grid-small" uk-grid>
+
+                <div class="uk-width-1-1@s">
+                  <label class="uk-form-label" for="custom-input">Custom prompt</label>
+                  <button uk-icon="icon: question" type="button"></button>
+                  <div class="uk-card uk-card-small uk-card-body uk-card-default" uk-drop="pos: right-top; mode: click;">Keep it simple. Don't be too discoursive, write the element that you'd want to add. Eg: "red scarf" or "silver tiara". You might need to add strength with the syntax "(silver tiara:1.2)".<br/>If the element is generic and could be misinterpreted try to give context. Eg: instead of "crown" try with "wearing a silver crown on his head".</div>
+                  <div class="uk-form-controls">
+                    <textarea name="custom-input" class="uk-textarea" id="custom-input" rows="3" placeholder="Add a custom element" aria-label="Textarea"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </aside>
+    <!-- /LEFT BAR -->
+  
+    <!-- CONTENT -->
+    <div id="content" class="uk-light" data-uk-height-viewport="expand: true">
+      <progress id="main-progress" class="progress" value="0" max="0"></progress>
+
+      <div class="uk-text-center uk-container uk-container-expand">
+        <form><button id="roll" class="uk-button uk-button-danger" type="button"><span id="main-spinner" uk-spinner="ratio: 0.7" style="display: none;"></span><span id="roll-icon" uk-icon="icon: bolt"></span>&nbsp;Roll</button><input id="main-seed" class="uk-input" type="text" placeholder="Seed" aria-label="Seed" value="0"><label>Random <input id="is-random" class="uk-checkbox" type="checkbox" checked></label></form>
+      </div>
+
+      <div id="results" class="uk-child-width-expand uk-text-center" uk-grid uk-lightbox></div>
+    </div>
+    <!-- /CONTENT -->
+
+    <!-- MODAL -->
+    <div id="app-modal" uk-modal>
+      <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">An error occurred</h2>
+        <p id="modal-message"></p>
+        <p class="uk-text-center">
+          <button class="uk-button uk-button-default uk-modal-close" type="button">Close</button>
+        </p>
+      </div>
+    </div>
+    <!-- /MODAL -->
+
+    <script src="/dungeon/js/uikit.min.js"></script>
+		<script src="/dungeon/js/uikit-icons.min.js"></script>
+    <script src="/dungeon/js/dungeon.js"></script>
+  </body>
+</html>
