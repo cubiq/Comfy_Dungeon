@@ -58,7 +58,7 @@
         response = await response.json();
         let checkpoints = response['CheckpointLoaderSimple']['input']['required']['ckpt_name'][0];
         const checkpoints_regex = {
-            'DreamShaperXLTurboV2': /.*dreamshaper.*xl.*turbo.*v2\..*\.safetensors$/gi,
+            'DreamShaperXLTurboV2': /.*dreamshaper.*xl.*turbo.*v2.*\.safetensors$/gi,
             'ProteusV0.3': /.*proteus.*0\.3.*\.safetensors$/gi,
         };
         let available_checkpoints = {};
