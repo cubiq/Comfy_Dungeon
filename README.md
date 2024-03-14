@@ -5,6 +5,8 @@ Build D&D Character Portraits with ComfyUI.
 
 Please let me know your thoughs and if you would like this repository to be implemented and expanded into a more feature rich application.
 
+![Comfy Dungeon](./comfy_dungeon.jpg)
+
 ## Installation
 
 Download or git clone this repository in the ComfyUI `custom_nodes` directory. You then can access it going to the URL: `http://[comfy address]:[comfy port]/dungeon`.
