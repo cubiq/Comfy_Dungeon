@@ -488,7 +488,8 @@
     });
 
     // WebSocket
-    const socket = new WebSocket('ws://' + server_address + '/ws?clientId=' + client_id);
+    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const socket = new WebSocket(protocol + '//' + server_address + '/ws?clientId=' + client_id);
     socket.addEventListener('open', (event) => {
         console.log('Connected to the server');
     });
