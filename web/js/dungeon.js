@@ -171,6 +171,9 @@
     const atmosphere_input = _('#atmosphere-input');
     const ethnicity_input = _('#ethnicity-input');
     const custom_input = _('#custom-input');
+	
+	const generated_prompt = _('#final-prompt');
+	
     
     function updateProgress(max=0, value=0) { progressbar.max = max; progressbar.value = value; }
 
@@ -462,6 +465,7 @@
             wf['6']['inputs']['batch_size'] = batch_size_input.value;
             wf['4']['inputs']['text'] = positive;
             wf['5']['inputs']['text'] = negative;
+			generated_prompt.value = positive;
 
             timerStart();
             response = await queue_prompt(wf);
