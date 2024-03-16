@@ -310,6 +310,24 @@
                 </div>
               </div>
             </div>
+			
+            <div>
+              <a class="uk-accordion-title" href>Debug</a>
+
+              <div class="uk-accordion-content uk-grid-small" uk-grid>
+
+                <div class="uk-width-1-1@s">
+                  <label class="uk-form-label" for="custom-input">Generated prompt</label>
+                  <button uk-icon="icon: question" type="button"></button>
+                  <div class="uk-card uk-card-small uk-card-body uk-card-default" uk-drop="pos: right-top; mode: click;">
+					This is the generated prompt, used in the last image generation. Use it wisely!
+                  </div>
+                  <div class="uk-form-controls">
+                    <textarea name="final-prompt" class="uk-textarea" id="final-prompt" rows="3" placeholder="..." aria-label="Textarea" readonly></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </div>
         </form>
