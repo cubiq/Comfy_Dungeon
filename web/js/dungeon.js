@@ -180,6 +180,13 @@
     function updateProgress(max=0, value=0) { progressbar.max = max; progressbar.value = value; }
 
     // Event listeners
+	document.body.addEventListener('keydown', (event) => {
+		if(event.key === "Enter" && (event.metaKey || event.ctrlKey)) {
+			roll.click(); // listen for control + enter to start the image generation
+		}
+	});
+	
+	
     roll.addEventListener('click', async (event) => {
         if (IS_GENERATING) {
             await interrupt();
