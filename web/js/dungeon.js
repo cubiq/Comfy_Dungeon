@@ -173,8 +173,8 @@
     const custom_input = _('#custom-input');
 
     const final_prompt_positive = _('#final-prompt-positive');
-	const final_prompt_negative = _('#final-prompt-negative');
-	const final_prompt_conditioning = _('#final-prompt-conditioning');
+    const final_prompt_negative = _('#final-prompt-negative');
+    const final_prompt_conditioning = _('#final-prompt-conditioning');
     
     function updateProgress(max=0, value=0) { progressbar.max = max; progressbar.value = value; }
 
