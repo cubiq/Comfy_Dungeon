@@ -11,13 +11,13 @@
 	<body>
     <!-- LEFT BAR -->
     <aside id="left-col" class="uk-light uk-visible@m">
-      <h4 class="uk-text-center uk-margin-remove-vertical text-light">Comfy Dungeon<small><sup> v0.1.0</sup></small></h4>
+      <h4 class="uk-text-center uk-margin-remove-vertical text-light">Comfy Dungeon<small><sup> v0.1.1</sup></small></h4>
 
       <div class="left-content-box left-nav-wrap">
         <form class="uk-grid-small">
           <div uk-accordion="collapsible: false">
             <div>
-              <a class="uk-accordion-title" href>Generation parms</a>
+              <a class="uk-accordion-title" href>Generation params</a>
 
               <div class="uk-accordion-content uk-grid-small" uk-grid>
                 <div class="uk-width-1-2@s">
@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="uk-width-1-1@s">
-                  <label class="uk-form-label" for="style-input">Style &amp; Model</label>
+                  <label class="uk-form-label" for="style-input">Preset</label>
                   <div class="uk-form-controls">
                     <select class="uk-select" id="style-input" aria-label="Select">
                       <option value="ProteusV0.3-LCM">Illustration - Fast</option>
@@ -53,7 +53,7 @@
             </div>
 
             <div>
-              <a class="uk-accordion-title" href>Setting</a>
+              <a class="uk-accordion-title" href>Scene</a>
 
               <div class="uk-accordion-content uk-grid-small" uk-grid>
                 <div class="uk-width-1-2@s">
@@ -103,7 +103,7 @@
                 <div class="uk-width-1-2@s">
                   <label class="uk-form-label" for="atmosphere-input">Color hint</label>
                   <button uk-icon="icon: question" type="button"></button>
-                  <div class="uk-card uk-card-small uk-card-body uk-card-default" uk-drop="pos: right-top; mode: click;">The picture will have a predominat color.</div>
+                  <div class="uk-card uk-card-small uk-card-body uk-card-default" uk-drop="pos: right-top; mode: click;">The picture will have a predominant color.</div>
                   <div class="uk-form-controls">
                     <select class="uk-select" id="atmosphere-input" aria-label="Select">
                       <option value="">-- undefined --</option>
@@ -141,7 +141,7 @@
                 <div class="uk-width-1-2@s">
                   <label class="uk-form-label" for="gender-input">Gender</label>
                   <button uk-icon="icon: question" type="button"></button>
-                  <div class="uk-card uk-card-small uk-card-body uk-card-default" uk-drop="pos: right-top; mode: click;">Femininity/Masculinity slider trait is temptative, the result may not be what you expect.</div>
+                  <div class="uk-card uk-card-small uk-card-body uk-card-default" uk-drop="pos: right-top; mode: click;">Femininity/Masculinity slider trait is tentative, the result may not be what you expect.</div>
                   <input class="uk-range" id="gender-input" type="range" value="0" min="0" max="3" step="1" aria-label="Range">
                   <div class="uk-form-label uk-grid-small uk-text-muted" uk-grid><div class="uk-width-1-2@s"><span uk-icon="icon: arrow-left"></span>Femininity</div><div class="uk-width-1-2@s" style="text-align:right;">Masculinity<span uk-icon="icon: arrow-right"></span></div></div>
                 </div>
