@@ -171,10 +171,20 @@
     const atmosphere_input = _('#atmosphere-input');
     const ethnicity_input = _('#ethnicity-input');
     const custom_input = _('#custom-input');
+
+    const final_prompt_positive = _('#final-prompt-positive');
+    const final_prompt_negative = _('#final-prompt-negative');
+    const final_prompt_conditioning = _('#final-prompt-conditioning');
     
     function updateProgress(max=0, value=0) { progressbar.max = max; progressbar.value = value; }
 
     // Event listeners
+	document.body.addEventListener('keydown', (event) => {
+		if(event.key === "Enter" && (event.metaKey || event.ctrlKey)) {
+			roll.click(); // listen for control + enter to start the image generation
+		}
+	});
+
     roll.addEventListener('click', async (event) => {
         if (IS_GENERATING) {
             await interrupt();
@@ -462,6 +472,10 @@
             wf['6']['inputs']['batch_size'] = batch_size_input.value;
             wf['4']['inputs']['text'] = positive;
             wf['5']['inputs']['text'] = negative;
+
+            final_prompt_positive.value = positive;
+            final_prompt_negative.value = negative;
+            final_prompt_conditioning.value = custom_prompt.replace(/(\r\n|\n|\r)/gm, " ");
 
             timerStart();
             response = await queue_prompt(wf);
