@@ -1,0 +1,117 @@
+html {
+    background-color: #181b1d;
+    background-size: 32px 32px;
+    background-image: radial-gradient(circle, #3d454b 1px, rgba(0, 0, 0, 0) 1px);
+}
+
+#left-col {
+    position: fixed;
+    left: 0;
+    top:0;
+    bottom:0;
+    width: 460px;
+    z-index: 2;
+    transition: left 0.3s ease-out;
+    background-color: #222A30;
+    overflow-y: auto;
+}
+
+#content {
+    position: relative;
+	padding: 30px 0 0 0;
+	margin-left: 0;
+	transition: margin 0.2s cubic-bezier(.4,0,.2,1);
+}
+@media screen and (min-width: 960px){
+	#content {
+		/* equal to left-col width */
+		margin-left: 460px;
+	}
+}
+
+#main-seed {
+    width: 120px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+#main-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    border-radius: 0;
+    height: 7px;
+    background-color: #0c3047;
+    border: 0;
+}
+
+#main-progress::-moz-progress-bar {
+    background: #00c070;
+}
+
+#main-progress::-webkit-progress-bar {
+    background: transparent;
+}
+
+#main-progress::-webkit-progress-value {
+    background: #00c070;
+}
+
+#left-col h4 {
+    background-color: #13669e;
+    position: relative;
+    padding: 8px 0;
+}
+
+#sidebar-toggle {
+    position: absolute;
+    z-index: 0;
+    top: -14px;
+    right: 10px;
+}
+
+.left-content-box {
+    background-color: #222A30;
+}
+
+#results {
+    padding: 40px 20px;
+}
+
+#results img {
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+.uk-notification-message {
+    background-color: #06633c;
+    color: #ddd;
+}
+
+datalist {
+    display: flex;
+    justify-content: space-between;
+    font-size: .875rem;
+    flex-direction: row;
+    padding: 0 4px;
+}
+
+datalist option {
+    padding: 0;
+}
+
+.uk-accordion > div {
+    margin-top: 0!important;
+}
+
+.uk-accordion-content {
+    padding: 15px;
+}
+
+.uk-accordion-title {
+    padding: 10px 12px;
+    border-bottom: 1px solid #394650;
+    background-color: #171d21;
+}
