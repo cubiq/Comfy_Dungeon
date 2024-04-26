@@ -1,0 +1,15 @@
+{
+  "data": [
+    [ "", "-- undefined --" ],
+    [ "blond", "Blond" ],
+    [ "dark blond", "Dark Blond" ],
+    [ "medium brown", "Medium Brown" ],
+    [ "dark brown", "Dark Brown" ],
+    [ "reddish brown", "Reddish Brown" ],
+    [ "red", "Red" ],
+    [ "black", "Black" ],
+    [ "canescent", "Graying" ],
+    [ "gray", "Gray" ],
+    [ "white", "White" ]
+  ]
+}
