@@ -7,12 +7,15 @@
 
 		<link rel="stylesheet" type="text/css" href="/dungeon/css/uikit.min.css">
 		<link rel="stylesheet" type="text/css" href="/dungeon/css/dungeon.css?v=0.1.0">
+        <script src="/dungeon/js/uikit.min.js"></script>
+        <script src="/dungeon/js/uikit-icons.min.js"></script>
 	</head>
 	<body>
     <!-- LEFT BAR -->
-    <aside id="left-col" class="uk-light uk-visible@m">
-      <h4 class="uk-text-center uk-margin-remove-vertical text-light">Comfy Dungeon<small><sup> v0.1.1</sup></small></h4>
-
+    <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: false">
+    <div id="left-col" class="uk-light uk-width-auto">
+      <h4 class="uk-text-center uk-margin-remove-vertical text-light  uk-offcanvas-close">Comfy Dungeon<small><sup> v0.1.1</sup></small></h4>
+      <button class="uk-offcanvas-close" type="button" uk-close></button>
       <div class="left-content-box left-nav-wrap">
         <form class="uk-grid-small">
           <div uk-accordion="collapsible: false">
@@ -314,10 +317,14 @@
           </div>
         </form>
       </div>
-    </aside>
+    </div>
+    </div>
     <!-- /LEFT BAR -->
   
     <!-- CONTENT -->
+    <div id="top-row" class="uk-light uk-width-auto" style="display: table-cell; vertical-align: middle;" uk-toggle="target: #offcanvas-push">
+        <h4 class="uk-text-center text-light">Comfy Dungeon<small><sup> v0.1.1</sup></small></h4>
+    </div>
     <div id="content" class="uk-light" data-uk-height-viewport="expand: true">
       <progress id="main-progress" class="progress" value="0" max="0"></progress>
 
@@ -328,6 +335,7 @@
       <div id="results" class="uk-child-width-expand uk-text-center" uk-grid uk-lightbox></div>
     </div>
     <!-- /CONTENT -->
+    <script>UIkit.offcanvas(document.getElementById('offcanvas-push')).show();</script>
 
     <!-- MODAL -->
     <div id="app-modal" uk-modal>
