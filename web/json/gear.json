@@ -1,0 +1,14 @@
+{
+  "data": [
+    [ "", "-- undefined --" ],
+    [ "casual clothing", "Casual clothing" ],
+    [ "elegant garments", "Elegant clothing" ],
+    [ "furs clothing", "Furs" ],
+    [ "a leather armor", "Light armor" ],
+    [ "minimal simple clothing", "Minimal" ],
+    [ "an heavy armor", "Heavy armor" ],
+    [ "noble clothing", "Noble clothing" ],
+    [ "rags", "Rags" ],
+    [ "a robe", "Robe" ]
+  ]
+}

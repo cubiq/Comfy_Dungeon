@@ -1,0 +1,26 @@
+{
+  "data": [
+    [ "", "-- undefined --" ],
+    [ "burgundy", "Burgundy" ],
+    [ "scarlet red", "Scarlet" ],
+    [ "pink", "Pink" ],
+    [ "beige", "Beige" ],
+    [ "brown", "Brown" ],
+    [ "orange", "Orange" ],
+    [ "yellow", "Yellow" ],
+    [ "green", "Green" ],
+    [ "emerald", "Emerald" ],
+    [ "aquamarine", "Aquamarine" ],
+    [ "cerulean", "Cerulean" ],
+    [ "blue", "Blue" ],
+    [ "purple", "Purple" ],
+    [ "magenta", "Magenta" ],
+    [ "white", "White" ],
+    [ "gray", "Gray" ],
+    [ "black", "Black" ],
+    [ "bronze", "Bronze" ],
+    [ "copper", "Copper" ],
+    [ "silver", "Silver" ],
+    [ "gold", "Gold" ]
+  ]
+}

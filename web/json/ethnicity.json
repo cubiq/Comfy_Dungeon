@@ -1,0 +1,31 @@
+{
+  "data": [
+    [ "", "-- undefined --" ],
+    [ "0", "Completely Random" ],
+
+    [ "1", "Africa: Eastern" ],
+    [ "2", "Africa: Middle" ],
+    [ "3", "Africa: Northen" ],
+    [ "4", "Africa: Southern" ],
+    [ "5", "Africa: Western" ],
+
+    [ "6", "America: Central" ],
+    [ "7", "America: Northern" ],
+    [ "8", "America: Sourthern" ],
+
+    [ "9", "Asia: Central" ],
+    [ "10", "Asia: Eastern" ],
+    [ "11", "Asia: South-Eastern" ],
+    [ "12", "Asia: Southern" ],
+    [ "13", "Asia: Western" ],
+
+    [ "14", "Australia &amp; New Zealand" ],
+
+    [ "15", "European: Eastern" ],
+    [ "16", "European: Northern" ],
+    [ "17", "European: Southern" ],
+    [ "18", "European: Western" ],
+    [ "19", "European: Islandic" ],
+    [ "21", "Mela/Micro/Poly-nesia" ]
+  ]
+}

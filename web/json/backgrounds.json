@@ -1,0 +1,17 @@
+{
+  "data": [
+    [ "", "-- undefined --" ],
+    [ "inside a cave", "Cave" ],
+    [ "in the desert", "Desert" ],
+    [ "inside a dungeon", "Dungeon" ],
+    [ "flames in background", "Flames" ],
+    [ "forest in background", "Forest" ],
+    [ "on a glacier", "Glacier" ],
+    [ "magical aura in background", "Magical aura" ],
+    [ "mountains in background", "Mountains" ],
+    [ "flat plain background", "Plain background" ],
+    [ "in the study, scrolls and potions", "Study" ],
+    [ "inside a temple", "Temple" ],
+    [ "on the streets of an old town", "Town" ]
+  ]
+}
