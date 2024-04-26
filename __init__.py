@@ -12,5 +12,6 @@ def deungeon_entrance(request):
 
 server.PromptServer.instance.routes.static("/dungeon/css/", path=os.path.join(WEBROOT, "css"))
 server.PromptServer.instance.routes.static("/dungeon/js/", path=os.path.join(WEBROOT, "js"))
+server.PromptServer.instance.routes.static("/dungeon/json/", path=os.path.join(WEBROOT, "json"))
 
 __all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']
