@@ -1,0 +1,11 @@
+{
+  "data": [
+    [ "human", "Human" ],
+    [ "dwarf", "Dwarf" ],
+    [ "elven", "Elf" ],
+    [ "gnome", "Gnome" ],
+    [ "half-elf", "Half-Elf" ],
+    [ "halfling", "Halfling" ],
+    [ "tiefling", "Tiefling" ]
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "data": [
+    [ "fighter", "Fighter" ],
+    [ "cleric", "Cleric" ],
+    [ "mage", "Mage" ],
+    [ "noble person", "Noble person" ],
+    [ "Paladin", "Paladin" ],
+    [ "peasant", "Peasant" ],
+    [ "ranger", "Ranger" ],
+    [ "shaman", "Shaman" ],
+    [ "thief", "Thief" ]
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "data": [
+    [ "", "-- undefined --" ],
+    [ "bald", "Bald" ],
+    [ "simple braid hairstyle", "Braids" ],
+    [ "buzz haircut", "Buzz cut" ],
+    [ "cornrows hairstyle", "Cornrows" ],
+    [ "long {{COLOR}}curly hair", "Curly Long" ],
+    [ "short {{COLOR}}curly hair", "Curly Short" ],
+    [ "dreadlocks hairstyle", "Dreadlocks" ],
+    [ "long {{COLOR}}hair", "Long hair" ],
+    [ "long {{COLOR}}disheveled hair", "Long disheveled" ],
+    [ "long {{COLOR}}straight hair", "Long straight" ],
+    [ "short mohawk hairstyle", "Mohawk" ],
+    [ "pixie haircut", "Pixie cut" ],
+    [ "ponytail hairstyle", "Ponytail" ],
+    [ "short {{COLOR}}hair", "Short hair" ],
+    [ "short {{COLOR}}disheveled hair", "Short disheveled" ],
+    [ "short {{COLOR}}straight hair", "Short straight" ]
+  ]
+}

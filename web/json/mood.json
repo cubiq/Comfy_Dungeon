@@ -1,0 +1,10 @@
+{
+  "data": [
+    [ "", "Neutral" ],
+    [ "angry evil", "Angry" ],
+    [ "wise thoughtful serious mood", "Somber" ],
+    [ "cunning smirk mood", "Cunning" ],
+    [ "serene joyful dreamy", "Serene" ],
+    [ "happy jovial (smiling:0.85)", "Happy" ]
+  ]
+}
