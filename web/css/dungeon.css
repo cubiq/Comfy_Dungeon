@@ -7,8 +7,8 @@ html {
 #left-col {
     position: fixed;
     left: 0;
-    top:0;
-    bottom:0;
+    top: 0;
+    bottom: 0;
     width: 460px;
     z-index: 2;
     transition: left 0.3s ease-out;
@@ -16,18 +16,30 @@ html {
     overflow-y: auto;
 }
 
+#top-row {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 30px;
+    width: 360px;
+    background-color: #13669E;
+    margin-top: 5px;
+    z-index: 100;
+}
 #content {
     position: relative;
-	padding: 30px 0 0 0;
-	margin-left: 0;
-	transition: margin 0.2s cubic-bezier(.4,0,.2,1);
+    padding: 30px 0 0 0;
+    margin-left: 0;
+    transition: margin 0.2s cubic-bezier(.4,0,.2,1);
 }
+/* now that left-menu collapses, no need for min-width for content. [better for portrate/phones]
 @media screen and (min-width: 960px){
 	#content {
-		/* equal to left-col width */
+		/ * equal to left-col width * /
 		margin-left: 460px;
 	}
 }
+*/
 
 #main-seed {
     width: 120px;
